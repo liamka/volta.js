@@ -20,10 +20,6 @@ Bower
 ```
 bower install volta
 ```
-CDN
-```
-<script src="https://cdn.jsdelivr.net/volta.js/1.0.3/volta.min.js"></script>
-```
 
 and initialize
 ```html
