@@ -258,7 +258,6 @@ see examples.
 
 ```html
 Chrome
-Edge
 Firefox
 Internet Explorer (6+)
 Opera
