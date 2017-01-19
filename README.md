@@ -14,11 +14,11 @@
 
 NPM
 ```
-npm install volta
+npm install volta.js
 ```
 Bower
 ```
-bower install volta
+bower install volta.js
 ```
 
 and initialize
