@@ -22,7 +22,7 @@ bower install volta
 ```
 CDN
 ```
-<script type="text/javascript" src="https://cdnjs.com/libraries/bulma"></script>
+<script src="https://cdn.jsdelivr.net/volta.js/1.0.3/volta.min.js"></script>
 ```
 
 and initialize
