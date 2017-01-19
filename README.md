@@ -1,6 +1,6 @@
 ![Diet Logo](http://i.imgur.com/AJYLmkz.jpg)
 
-[![NPM](http://img.shields.io/npm/v/diet.svg?style=flat)](https://www.npmjs.org/package/diet)
+[![NPM](http://img.shields.io/npm/v/volta.js.svg?style=flat)](https://www.npmjs.org/package/volta.js)
 
 
 [Volta.js](https://github.com/liamka/volta.js) is a tiny, fast library to increase speed of coding.
@@ -9,12 +9,6 @@
     Test div block
 </div>
 ```
-
-## Features
-
-- Built for fast development 
-- Request and Reponse combined into the [signal object ($)](http://dietjs.com/tutorials/signal#)
-- [Very small](http://dietjs.com/resources/comparison#sloc), just ~550 sloc
 
 ## Install
 
