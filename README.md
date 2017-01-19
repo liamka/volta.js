@@ -1,209 +1,238 @@
-![Diet Logo](http://i.imgur.com/Giyox4x.jpg)
+![Diet Logo](http://i.imgur.com/AJYLmkz.jpg)
 
-[![NPM](http://img.shields.io/npm/v/diet.svg?style=flat)](https://www.npmjs.org/package/diet) [![Downloads](http://img.shields.io/npm/dm/diet.svg?style=flat)](https://www.npmjs.org/package/diet) [![Coveralls](http://img.shields.io/coveralls/adamhalasz/diet.svg?style=flat)](https://coveralls.io/r/adamhalasz/diet)
+[![NPM](http://img.shields.io/npm/v/diet.svg?style=flat)](https://www.npmjs.org/package/diet) [![Downloads](http://img.shields.io/npm/dm/diet.svg?style=flat)](https://www.npmjs.org/package/diet)
 
 
-[Diet](http://dietjs.com) is a tiny, fast and modular node.js web framework. Good for making fast & scalable apps and apis.
-```javascript
-var server = require('diet')
-
-var app = server()
-app.listen(8000)
-app.get('/', function($){
-    $.end('hello world')
-})
+[Volta.js](https://github.com/liamka/volta.js) is a tiny, fast library to increase speed of coding.
+```html
+<div class="margin-top-150 transform-rotate(7deg)">
+    Test div block
+</div>
 ```
 
 ## Features 
-- Built for [virtual hosting](http://dietjs.com/tutorials/host#) 
+- Built for fast development 
 - Request and Reponse combined into the [signal object ($)](http://dietjs.com/tutorials/signal#)
-- Simple and Semantic Routing with [app.get](http://dietjs.com/api/server#app.get) and [app.post](http://dietjs.com/api/server#app.post) and other methods.
-- [Middleware](http://dietjs.com/tutorials/router#middleware) Support
-- [MVC](http://dietjs.com/api/server#app.model) (model-view-controller) Support
-- [Header](http://dietjs.com/tutorials/router#header) and [footer](http://dietjs.com/tutorials/router#footer) routes for better global middleware structuring
-- Support for ES6 Generator Middlewares/Controllers (new since v0.10)
-- Asynchronous [error handling](http://dietjs.com/tutorials/router#error) with [app.error](http://dietjs.com/api/server#app.error) routes
-- [404](http://dietjs.com/tutorials/router#missing) routing with [app.missing](http://dietjs.com/api/server#app.missing)
 - [Very small](http://dietjs.com/resources/comparison#sloc), just ~550 sloc
 
 ## Install
 ```
-npm install diet
-```
+npm install volta
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p align="center">
-  <img src="https://i.imgur.com/BqsX9NT.png" width="256" height="256" alt="mitt">
-  <br>
-  <b>Mitt</b>: tiny 200b functional event emitter / pubsub.
-  <br>
-  <a href="https://www.npmjs.org/package/mitt"><img src="https://img.shields.io/npm/v/mitt.svg?style=flat" alt="npm"></a> <a href="https://travis-ci.org/developit/mitt"><img src="https://travis-ci.org/developit/mitt.svg?branch=master" alt="travis"></a>
-</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# markdown-toc [![NPM version](https://img.shields.io/npm/v/markdown-toc.svg?style=flat)](https://www.npmjs.com/package/markdown-toc) [![NPM monthly downloads](https://img.shields.io/npm/dm/markdown-toc.svg?style=flat)](https://npmjs.org/package/markdown-toc)  [![NPM total downloads](https://img.shields.io/npm/dt/markdown-toc.svg?style=flat)](https://npmjs.org/package/markdown-toc) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/markdown-toc.svg?style=flat&label=Travis)](https://travis-ci.org/jonschlinkert/markdown-toc)
-
-> Generate a markdown TOC (table of contents) with Remarkable.
-
-## Table of Contents
-
-
-
-
-
-
-
-## Props
-
-| 参数    | 类型    | 说明   |
-| ------------- |-------------| -----|
-| type | String |必填项,指明菜单的类型,有6种：top,bottom,left,right,middle,middle-around |
-| circle | boolean | 菜单按钮是否为圆角，默认为方形按钮 |
-| mask | String | 遮罩层，有两种："white"和"black" |
-| animate | String | 子菜单动画,可以引入外部css动画库，比如Animate.css |
-| btn | boolean | 开关按钮,填这属性，则有默认开关按钮，不填则没有默认,需要在slot中自行定义开关按钮 |
-| colors | Array | 按钮和菜单的背景颜色 |
-
-
-
-
-
-
-
-
-
-
-## Slot
-
-| name    | 说明   |
-| -------------| -----|
-| item_btn  | 自定义开关按钮 |
-| item_1 | 第一个菜单的内容 |
-| item_2 | 第二个菜单的内容 |
-| item_3 | 第三个菜单的内容 |
-| item_4 | 第四个菜单的内容 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## freecodecamp中文社区发展历程
-| 时间            | done          | 
-| :------------- | :------------- |
-| 2016.3.22    | 基于freecodecamp代码贡献文档和优才公开课视频在本机搭建freecodecamp项目 |
-| 2016.3.28    | 基于花生壳动态域名解析服务在极路由搭建临时网站：freecodecamp.jios.org:3000 |
-| 2016.4.1     | 基于邹治免费提供的域名(freecodecamp.cn)和美国扳道工VPS上线freecodecamp中文社区 |
-| 2016.4.2     | 基于let's encryto给freecodecamp中文社区添加https。 |
-| 2016.4.5     | 基于优才公开课视频给freecodecamp中文社区添加nginx。 |
-| 2016.4.6     | 和freecodecamp创始人quincy沟通翻译规范、提交流程。 |
-| 2016.4.7     | 搜索freecodecamp issue中有关中文的翻译和提交，才发现2015.10月份就已经有人做中文翻译的事情了。 |
-| 2016.4.10    | 不再纠结于英文社区翻译规范和提交流程，独立思考、独立发展。 |
-| 2016.4.11    | 正式开始翻译网站首页：learning by doing。 |
-| 2016.4.13    | 正式开始翻译课程第一部分:getting started。 |
-| 2016.4.16    | 写了第一版翻译规范和参与流程。 |
-| 2016.4.17    | 开始翻译课程第二部分：html5 + css3。 |
-| 2016.4.24    | 参加猿生态在北京车库咖啡举办的第一次freecodecamp线下活动，结识了晋剑、jason、海良等小伙伴。 |
-| 2016.4.25    | 通过[freecodecamp中文聊天室](https://gitter.com/freecodecamp/chinese)招募到第一位参与翻译的小伙伴[tegrat](https://github.com/tegrat)。 |
-| 2016.4.28    | 胡可同学加入翻译志愿组，贡献翻译工具。 |
-| 2016.4.29    | 受胡可同学的感染，我写了simleJson.js来轻松干掉json文件的冗余部分。 |
-| 2016.5.8     | 受晋剑同学的邀请，我来到苏州，加入猿生态，负责freecodecamp中文社区的翻译和开发。 |
-| 2016.6.5     | 启动了苏州首届全民编程挑战赛 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Quick install
-
-Bulma is in early but active development! Try it out now:
 
 NPM
 
-npm install bulma
+npm install volta
 Bower
 
-bower install bulma
+bower install volta
 CDN
 
 https://cdnjs.com/libraries/bulma
 
-Feel free to raise an issue or submit a pull request.
 
 
 
+```
 
 
+## Examples
+```html
+<div class="asdasdasd">
+    The Prodigy
+</div>
+```
 
 
+## Reference
+| Property            | Description          | CSS          |
+| :------------- | :------------- | :------------- |
+| align-content    | Sets or returns the alignment between the lines inside a flexible container when the items do not use all available space | 3 |
+| align-items    | Sets or returns the alignment for items inside a flexible container | 3 |
+| align-self    | Sets or returns the alignment for selected items inside a flexible container | 3 |
+| animation    | A shorthand property for all the animation properties below, except the animationPlayState property | 3 |
+| animation-delay    | Sets or returns when the animation will start | 3 |
+| animation-direction    | Sets or returns whether or not the animation should play in reverse on alternate cycles | 3 |
+| animation-duration    | Sets or returns how many seconds or milliseconds an animation takes to complete one cycle | 3 |
+| animation-fill-mode    | Sets or returns what values are applied by the animation outside the time it is executing | 3 |
+| animation-iteration-count    | Sets or returns the number of times an animation should be played | 3 |
+| animation-name    | Sets or returns a name for the @keyframes animation | 3 |
+| animation-timing-function    | Sets or returns the speed curve of the animation | 3 |
+| animation-play-state    | Sets or returns whether the animation is running or paused | 3 |
+| background    | Sets or returns all the background properties in one declaration | 1 |
+| background-attachment    | Sets or returns whether a background-image is fixed or scrolls with the page | 1 |
+| background-color    | Sets or returns the background-color of an element | 1 |
+| background-image    | Sets or returns the background-image for an element | 1 |
+| background-position    | Sets or returns the starting position of a background-image | 1 |
+| background-repeat    | Sets or returns how to repeat (tile) a background-image | 1 |
+| background-clip    | Sets or returns the painting area of the background | 3 |
+| background-origin    | Sets or returns the positioning area of the background images | 3 |
+| background-size    | Sets or returns the size of the background image | 3 |
+| backface-visibility    | Sets or returns whether or not an element should be visible when not facing the screen | 3 |
+| border    | Sets or returns borderWidth, borderStyle, and borderColor in one declaration | 1 |
+| border-bottom    | Sets or returns all the borderBottom* properties in one declaration | 1 |
+| border-bottom-color    | Sets or returns the color of the bottom border | 1 |
+| border-bottom-left-radius    | Sets or returns the shape of the border of the bottom-left corner | 3 |
+| border-bottom-right-radius    | Sets or returns the shape of the border of the bottom-right corner | 3 |
+| border-bottom-style    | Sets or returns the style of the bottom border | 1 |
+| border-bottom-width    | Sets or returns the width of the bottom border | 1 |
+| border-collapse    | Sets or returns whether the table border should be collapsed into a single border, or not | 2 |
+| border-color    | Sets or returns the color of an element's border (can have up to four values) | 1 |
+| border-image    | A shorthand property for setting or returning all the borderImage* properties | 3 |
+| border-image-outset    | Sets or returns the amount by which the border image area extends beyond the border box | 3 |
+| border-image-repeat    | Sets or returns whether the image-border should be repeated, rounded or stretched | 3 |
+| border-image-slice    | Sets or returns the inward offsets of the image-border | 3 |
+| border-image-source    | Sets or returns the image to be used as a border | 3 |
+| border-image-width    | Sets or returns the widths of the image-border | 3 |
+| border-left    | Sets or returns all the borderLeft* properties in one declaration | 1 |
+| border-left-color    | Sets or returns the color of the left border | 1 |
+| border-left-style    | Sets or returns the style of the left border | 1 |
+| border-left-width    | Sets or returns the width of the left border | 1 |
+| border-radius    | A shorthand property for setting or returning all the four border*Radius properties | 3 |
+| border-right    | Sets or returns all the borderRight* properties in one declaration | 1 |
+| border-right-color    | Sets or returns the color of the right border | 1 |
+| border-right-style    | Sets or returns the style of the right border | 1 |
+| border-right-width    | Sets or returns the width of the right border | 1 |
+| border-spacing    | Sets or returns the space between cells in a table | 2 |
+| border-style    | Sets or returns the style of an element's border (can have up to four values) | 1 |
+| border-top    | Sets or returns all the borderTop* properties in one declaration | 1 |
+| border-top-color    | Sets or returns the color of the top border | 1 |
+| border-top-left-radius    | Sets or returns the shape of the border of the top-left corner | 3 |
+| border-top-right-radius    | Sets or returns the shape of the border of the top-right corner | 3 |
+| border-top-style    | Sets or returns the style of the top border | 1 |
+| border-top-width    | Sets or returns the width of the top border | 1 |
+| border-width    | Sets or returns the width of an element's border (can have up to four values) | 1 |
+| bottom    | Sets or returns the bottom position of a positioned element | 2 |
+| box-decoration-break    | Sets or returns the behaviour of the background and border of an element at page-break, or, for in-line elements, at line-break. | 3 |
+| box-shadow    | Attaches one or more drop-shadows to the box | 3 |
+| box-sizing    | Allows you to define certain elements to fit an area in a certain way | 3 |
+| caption-side    | Sets or returns the position of the table caption | 2 |
+| clear    | Sets or returns the position of the element relative to floating objects | 1 |
+| clip    | Sets or returns which part of a positioned element is visible | 2 |
+| color    | Sets or returns the color of the text | 1 |
+| column-count    | Sets or returns the number of columns an element should be divided into | 3 |
+| column-fill    | Sets or returns how to fill columns | 3 |
+| column-gap    | Sets or returns the gap between the columns | 3 |
+| column-rule    | A shorthand property for setting or returning all the columnRule* properties | 3 |
+| column-rule-color    | Sets or returns the color of the rule between columns | 3 |
+| column-rule-style    | Sets or returns the style of the rule between columns | 3 |
+| column-rule-width    | Sets or returns the width of the rule between columns | 3 |
+| columns    | A shorthand property for setting or returning columnWidth and columnCount | 3 |
+| column-span    | Sets or returns how many columns an element should span across | 3 |
+| column-width    | Sets or returns the width of the columns | 3 |
+| content    | Used with the :before and :after pseudo-elements, to insert generated content | 2 |
+| counter-increment    | Increments one or more counters | 2 |
+| counter-reset    | Creates or resets one or more counters | 2 |
+| cursor    | Sets or returns the type of cursor to display for the mouse pointer | 2 |
+| direction    | Sets or returns the text direction | 2 |
+| display    | Sets or returns an element's display type | 1 |
+| empty-cells    | Sets or returns whether to show the border and background of empty cells, or not | 2 |
+| filter    | Sets or returns image filters (visual effects, like blur and saturation) | 3 |
+| flex    | Sets or returns the length of the item, relative to the rest | 3 |
+| flex-basis    | Sets or returns the initial length of a flexible item | 3 |
+| flex-direction    | Sets or returns the direction of the flexible items | 3 |
+| flex-flow    | A shorthand property for the flexDirection and the flexWrap properties | 3 |
+| flex-grow    | Sets or returns how much the item will grow relative to the rest | 3 |
+| flex-shrink    | Sets or returns how the item will shrink relative to the rest | 3 |
+| flex-wrap    | Sets or returns whether the flexible items should wrap or not | 3 |
+| css-float    | Sets or returns the horizontal alignment of an element | 1 |
+| font    | Sets or returns fontStyle, fontVariant, fontWeight, fontSize, lineHeight, and fontFamily in one declaration | 1 |
+| font-family    | Sets or returns the font family for text | 1 |
+| font-size    | Sets or returns the font size of the text | 1 |
+| font-style    | Sets or returns whether the style of the font is normal, italic or oblique | 1 |
+| font-variant    | Sets or returns whether the font should be displayed in small capital letters | 1 |
+| font-weight    | Sets or returns the boldness of the font | 1 |
+| font-size-adjust    | Preserves the readability of text when font fallback occurs | 3 |
+| font-stretch    | Selects a normal, condensed, or expanded face from a font family | 3 |
+| hanging-punctuation    | Specifies whether a punctuation character may be placed outside the line box | 3 |
+| height    | Sets or returns the height of an element | 1 |
+| hyphens    | Sets how to split words to improve the layout of paragraphs | 3 |
+| icon    | Provides the author the ability to style an element with an iconic equivalent | 3 |
+| image-orientation    | Specifies a rotation in the right or clockwise direction that a user agent applies to an image | 3 |
+| justify-content    | Sets or returns the alignment between the items inside a flexible container when the items do not use all available space. | 3 |
+| left    | Sets or returns the left position of a positioned element | 2 |
+| letter-spacing    | Sets or returns the space between characters in a text | 1 |
+| line-height    | Sets or returns the distance between lines in a text | 1 |
+| list-style    | Sets or returns listStyleImage, listStylePosition, and listStyleType in one declaration | 1 |
+| list-style-image    | Sets or returns an image as the list-item marker | 1 |
+| list-style-position    | Sets or returns the position of the list-item marker | 1 |
+| list-style-type    | Sets or returns the list-item marker type | 1 |
+| margin    | Sets or returns the margins of an element (can have up to four values) | 1 |
+| margin-bottom    | Sets or returns the bottom margin of an element | 1 |
+| margin-left    | Sets or returns the left margin of an element | 1 |
+| margin-right    | Sets or returns the right margin of an element | 1 |
+| margin-top    | Sets or returns the top margin of an element | 1 |
+| max-height    | Sets or returns the maximum height of an element | 2 |
+| max-width    | Sets or returns the maximum width of an element | 2 |
+| min-height    | Sets or returns the minimum height of an element | 2 |
+| min-width    | Sets or returns the minimum width of an element | 2 |
+| nav-down    | Sets or returns where to navigate when using the arrow-down navigation key | 3 |
+| nav-index    | Sets or returns the tabbing order for an element | 3 |
+| nav-left    | Sets or returns where to navigate when using the arrow-left navigation key | 3 |
+| nav-right    | Sets or returns where to navigate when using the arrow-right navigation key | 3 |
+| nav-up    | Sets or returns where to navigate when using the arrow-up navigation key | 3 |
+| opacity    | Sets or returns the opacity level for an element | 3 |
+| order    | Sets or returns the order of the flexible item, relative to the rest | 3 |
+| orphans    | Sets or returns the minimum number of lines for an element that must be left at the bottom of a page when a page break occurs inside an element | 2 |
+| outline    | Sets or returns all the outline properties in one declaration | 2 |
+| outline-color    | Sets or returns the color of the outline around a element | 2 |
+| outline-offset    | Offsets an outline, and draws it beyond the border edge | 3 |
+| outline-style    | Sets or returns the style of the outline around an element | 2 |
+| outline-width    | Sets or returns the width of the outline around an element | 2 |
+| overflow    | Sets or returns what to do with content that renders outside the element box | 2 |
+| overflow-x    | Specifies what to do with the left/right edges of the content, if it overflows the element's content area | 3 |
+| overflow-y    | Specifies what to do with the top/bottom edges of the content, if it overflows the element's content area | 3 |
+| padding    | Sets or returns the padding of an element (can have up to four values) | 1 |
+| padding-bottom    | Sets or returns the bottom padding of an element | 1 |
+| padding-left    | Sets or returns the left padding of an element | 1 |
+| padding-right    | Sets or returns the right padding of an element | 1 |
+| padding-top    | Sets or returns the top padding of an element | 1 |
+| page-break-after    | Sets or returns the page-break behavior after an element | 2 |
+| page-break-before    | Sets or returns the page-break behavior before an element | 2 |
+| page-break-inside    | Sets or returns the page-break behavior inside an element | 2 |
+| perspective    | Sets or returns the perspective on how 3D elements are viewed | 3 |
+| perspective-origin    | Sets or returns the bottom position of 3D elements | 3 |
+| position    | Sets or returns the type of positioning method used for an element (static, relative, absolute or fixed) | 2 |
+| quotes    | Sets or returns the type of quotation marks for embedded quotations | 2 |
+| resize    | Sets or returns whether or not an element is resizable by the user | 3 |
+| right    | Sets or returns the right position of a positioned element | 2 |
+| table-layout    | Sets or returns the way to lay out table cells, rows, and columns | 2 |
+| tab-size    | Sets or returns the length of the tab-character | 3 |
+| text-align    | Sets or returns the horizontal alignment of text | 1 |
+| text-align-last    | Sets or returns how the last line of a block or a line right before a forced line break is aligned when text-align is "justify" | 3 |
+| text-decoration    | Sets or returns the decoration of a text | 1 |
+| text-decoration-color    | Sets or returns the color of the text-decoration | 3 |
+| text-decoration-line    | Sets or returns the type of line in a text-decoration | 3 |
+| text-decoration-style    | Sets or returns the style of the line in a text decoration | 3 |
+| text-indent    | Sets or returns the indentation of the first line of text | 1 |
+| text-justify    | Sets or returns the justification method used when text-align is "justify" | 3 |
+| text-overflow    | Sets or returns what should happen when text overflows the containing element | 3 |
+| text-shadow    | Sets or returns the shadow effect of a text | 3 |
+| text-transform    | Sets or returns the capitalization of a text | 1 |
+| top    | Sets or returns the top position of a positioned element | 2 |
+| transform    | Applies a 2D or 3D transformation to an element | 3 |
+| transform-origin    | Sets or returns the position of transformed elements | 3 |
+| transform-style    | Sets or returns how nested elements are rendered in 3D space | 3 |
+| transition    | A shorthand property for setting or returning the four transition properties | 3 |
+| transition-property    | Sets or returns the CSS property that the transition effect is for | 3 |
+| transition-duration    | Sets or returns how many seconds or milliseconds a transition effect takes to complete | 3 |
+| transition-timing-function    | Sets or returns the speed curve of the transition effect | 3 |
+| transition-delay    | Sets or returns when the transition effect will start | 3 |
+| unicode-bidi    | Sets or returns whether the text should be overridden to support multiple languages in the same document | 2 |
+| vertical-align    | Sets or returns the vertical alignment of the content in an element | 1 |
+| visibility    | Sets or returns whether an element should be visible | 2 |
+| white-space    | Sets or returns how to handle tabs, line breaks and whitespace in a text | 1 |
+| width    | Sets or returns the width of an element | 1 |
+| word-break    | Sets or returns line breaking rules for non-CJK scripts | 3 |
+| word-spacing    | Sets or returns the spacing between words in a text | 1 |
+| word-wrap    | Allows long, unbreakable words to be broken and wrap to the next line | 3 |
+| widows    | Sets or returns the minimum number of lines for an element that must be visible at the top of a page | 2 |
+| z-index    | Sets or returns the stack order of a positioned element | 2 |
 
 
-
-
-Browser Support
-
-Bulma uses autoprefixer to make (most) Flexbox features compatible with earlier browser versions. According to Can I use, Bulma is compatible with:
-
+## Browser Support
 Chrome
 Edge
 Firefox
@@ -212,44 +241,6 @@ Opera
 Safari
 
 
+## Copyright and license
 
-
-
-
-
-
-
-
-
-
-# Table of Contents
-1. [Example](#example)
-2. [Example2](#example2)
-3. [Third Example](#third-example)
-
-## Example
-## Example2
-## Third Example
-
-
-
-
-```html
-var toc = require('markdown-toc');
-
-toc('# One\n\n# Two').content;
-// Results in:
-// - [One](#one)
-// - [Two](#two)
-```
-
-
-
-
-
-
-
-
-Copyright and license
-
-Code copyright 2017 Jeremy Thomas. Code released under the MIT license.
+Code copyright 2017 Kirill Kotikov. Code released under the MIT license.
