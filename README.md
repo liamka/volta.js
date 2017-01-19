@@ -1,52 +1,82 @@
 ![Diet Logo](http://i.imgur.com/AJYLmkz.jpg)
 
-[![NPM](http://img.shields.io/npm/v/diet.svg?style=flat)](https://www.npmjs.org/package/diet) [![Downloads](http://img.shields.io/npm/dm/diet.svg?style=flat)](https://www.npmjs.org/package/diet)
+[![NPM](http://img.shields.io/npm/v/diet.svg?style=flat)](https://www.npmjs.org/package/diet)
 
 
 [Volta.js](https://github.com/liamka/volta.js) is a tiny, fast library to increase speed of coding.
 ```html
-<div class="margin-top-150 transform-rotate(7deg)">
+<div class="margin-top-150 text-decoration-underline transform-rotate(7deg)">
     Test div block
 </div>
 ```
 
-## Features 
+## Features
+
 - Built for fast development 
 - Request and Reponse combined into the [signal object ($)](http://dietjs.com/tutorials/signal#)
 - [Very small](http://dietjs.com/resources/comparison#sloc), just ~550 sloc
 
 ## Install
-```
-npm install volta
-
-
-
 
 NPM
-
+```
 npm install volta
+```
 Bower
-
+```
 bower install volta
+```
 CDN
-
-https://cdnjs.com/libraries/bulma
-
-
-
-
+```
+<script type="text/javascript" src="https://cdnjs.com/libraries/bulma"></script>
 ```
 
-
-## Examples
+and initialize
 ```html
-<div class="asdasdasd">
-    The Prodigy
+<script>
+    Volta.render({
+        size: "px"
+    });
+</script>
+```
+
+## More examples
+
+```html
+
+<div class="background-size-cover">
+    Example div block
 </div>
+
+<div class="border-top-10 font-size-24">
+    Example div block
+</div>
+
+<div class="cursor-default">
+    Example div block
+</div>
+
+<div class="float-left">
+    Example div block
+</div>
+
+<div class="text-transform-uppercase padding-bottom-50">
+    Example div block
+</div>
+
+<div class="transform-rotate(15deg)">
+    Example div block
+</div>
+
+<div class="z-index-10">
+    Example div block
+</div>
+
 ```
 
 
 ## Reference
+
 | Property            | Description          | CSS          |
 | :------------- | :------------- | :------------- |
 | align-content    | Sets or returns the alignment between the lines inside a flexible container when the items do not use all available space | 3 |
@@ -233,6 +263,7 @@ https://cdnjs.com/libraries/bulma
 
 
 ## Browser Support
+
 Chrome
 Edge
 Firefox

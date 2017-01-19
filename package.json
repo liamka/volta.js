@@ -1,0 +1,30 @@
+{
+  "name": "volta.js",
+  "version": "1.0.0",
+  "description": "Tiny, fast library to increase speed of coding",
+  "main": "volta.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liamka/volta.js.git"
+  },
+  "keywords": [
+    "css",
+    "html",
+    "speed",
+    "coding",
+    "hint",
+    "hints"
+  ],
+  "author": "Kirill Kotikov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liamka/volta.js/issues"
+  },
+  "homepage": "https://github.com/liamka/volta.js#readme"
+}
