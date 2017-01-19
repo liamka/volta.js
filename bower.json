@@ -1,0 +1,25 @@
+{
+  "name": "volta.js",
+  "description": "Tiny, fast library to increase speed of coding",
+  "main": "volta.js",
+  "authors": [
+    "Kirill Kotikov"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "html",
+    "speed",
+    "coding",
+    "hint",
+    "hints"
+  ],
+  "homepage": "https://github.com/liamka/volta.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

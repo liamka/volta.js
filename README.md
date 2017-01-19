@@ -68,6 +68,8 @@ and initialize
 
 ```
 
+see examples.
+
 
 ## Reference
 
@@ -258,12 +260,14 @@ and initialize
 
 ## Browser Support
 
+```html
 Chrome
 Edge
 Firefox
 Internet Explorer (10+)
 Opera
 Safari
+```
 
 
 ## Copyright and license
