@@ -260,7 +260,7 @@ see examples.
 Chrome
 Edge
 Firefox
-Internet Explorer (10+)
+Internet Explorer (6+)
 Opera
 Safari
 ```

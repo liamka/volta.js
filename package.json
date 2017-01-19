@@ -1,6 +1,6 @@
 {
   "name": "volta.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Tiny, fast library to increase speed of coding",
   "main": "volta.js",
   "directories": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "liamka/volta"
+    "url": "liamka/volta.js"
   },
   "keywords": [
     "css",
