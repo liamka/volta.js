@@ -70,6 +70,7 @@ or see examples.
 ## Change log
 
 **1.0.9**
+
 *   Now you can write prefixes:
 ⋅⋅* -webkit-
 ⋅⋅* -moz-
@@ -86,6 +87,7 @@ Example:
 ```
 
 **1.0.8**
+
 *   Now you can select sizes:
 ⋅⋅* px
 ⋅⋅* pt
@@ -106,6 +108,7 @@ Example:
 ```
 
 **1.0.7**
+
 *   Bugfixing
 
 
