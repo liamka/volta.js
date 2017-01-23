@@ -67,6 +67,12 @@ and initialize
 or see examples.
 
 
+## Change log
+
+1.0.7
+*   Bugfixing
+
+
 ## Reference
 
 | Property            | Description          | CSS          |
