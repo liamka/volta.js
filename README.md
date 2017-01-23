@@ -69,8 +69,34 @@ or see examples.
 
 ## Change log
 
+1.0.9
+Now you can write prefixes:
+⋅⋅* -webkit-
+⋅⋅* -moz-
+⋅⋅* -o-
+⋅⋅* -ms-
+
+Example:
+```html
+
+<div class="-webkit-border-radius-10 -moz-border-radius-10">
+    Example div block
+</div>
+
+```
+
 1.0.8
-*   Now you can select sizes. Example:
+*   Now you can select sizes:
+⋅⋅* px
+⋅⋅* pt
+⋅⋅* em
+⋅⋅* rem
+⋅⋅* vw
+⋅⋅* vh
+⋅⋅* vmin
+⋅⋅* vmax
+
+Example:
 ```html
 
 <div class="margin-left-5-em width-1400-pt">
