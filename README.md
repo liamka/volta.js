@@ -25,7 +25,7 @@ and initialize
 ```html
 <script>
     Volta.render({
-        size: "px"
+        size: "px"      // default value
     });
 </script>
 ```
@@ -50,7 +50,7 @@ and initialize
     Example div block
 </div>
 
-<div class="text-transform-uppercase padding-bottom-50">
+<div class="margin-left-5-em width-1400-pt">
     Example div block
 </div>
 
@@ -68,6 +68,16 @@ or see examples.
 
 
 ## Change log
+
+1.0.8
+*   Now you can choose sizes. Example:
+```html
+
+<div class="margin-left-5-em width-1400-pt">
+    Example div block
+</div>
+
+```
 
 1.0.7
 *   Bugfixing
