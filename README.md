@@ -70,7 +70,7 @@ or see examples.
 ## Change log
 
 1.0.8
-*   Now you can choose sizes. Example:
+*   Now you can select sizes. Example:
 ```html
 
 <div class="margin-left-5-em width-1400-pt">
