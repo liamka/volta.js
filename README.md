@@ -71,7 +71,7 @@ or see examples.
 
 **1.0.9**
 
-*   Now you can write prefixes:
+Now you can write prefixes:
 ⋅⋅* -webkit-
 ⋅⋅* -moz-
 ⋅⋅* -o-
@@ -88,7 +88,7 @@ Example:
 
 **1.0.8**
 
-*   Now you can select sizes:
+Now you can select sizes:
 ⋅⋅* px
 ⋅⋅* pt
 ⋅⋅* em
@@ -109,7 +109,7 @@ Example:
 
 **1.0.7**
 
-*   Bugfixing
+Bugfixing
 
 
 ## Reference
