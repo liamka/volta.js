@@ -64,7 +64,7 @@ and initialize
 
 ```
 
-see examples.
+or see examples.
 
 
 ## Reference

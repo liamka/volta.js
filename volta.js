@@ -219,9 +219,15 @@ window.Conf = {
                     for (var id in p) {
                         if (p[id].toLowerCase().match(options.sub_strings)) {
                             var m = p[id].toLowerCase().split('-');
-                            for (var i_ = 0; i_ < m.length; i_++) {
-                                if((m.length - 1) == i_) {
-                                    m[1] = m[i_];
+                            var g = false;
+                            if(m.length == 3) {
+                                m[0] = m[0] + "-" + m[1];
+                            }
+                            if(!g) {
+                                for (var i_ = 0; i_ < m.length; i_++) {
+                                    if((m.length - 1) == i_) {
+                                        m[1] = m[i_];
+                                    }
                                 }
                             }
                             ds[i].style[(m[0] in options.replace) ? m[0] = options.replace[m[0]]:m[0]] = m[1] + (m[1] % 1 === 0 ? options.size :'');
