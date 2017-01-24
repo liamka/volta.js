@@ -73,10 +73,10 @@ or see examples.
 
 Now you can write prefixes:
 
-⋅⋅* -webkit-
-⋅⋅* -moz-
-⋅⋅* -o-
-⋅⋅* -ms-
+ * -webkit-
+ * -moz-
+ * -o-
+ * -ms-
 
 Example:
 ```html
@@ -88,16 +88,17 @@ Example:
 ```
 
 1.0.8
+
 *   Now you can select sizes:
-*   
-⋅⋅* px
-⋅⋅* pt
-⋅⋅* em
-⋅⋅* rem
-⋅⋅* vw
-⋅⋅* vh
-⋅⋅* vmin
-⋅⋅* vmax
+
+ * px
+ * pt
+ * em
+ * rem
+ * vw
+ * vh
+ * vmin
+ * vmax
 
 Example:
 ```html
