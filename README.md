@@ -89,7 +89,7 @@ Example:
 
 1.0.8
 
-*   Now you can select sizes:
+Now you can select sizes:
 
  * px
  * pt
