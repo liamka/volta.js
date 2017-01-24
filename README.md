@@ -25,7 +25,7 @@ and initialize
 ```html
 <script>
     Volta.render({
-        size: "px"      // default value
+        size: "px"      // default value (examples: px, pt, em, rem, vw, vh, vmin, vmax)
     });
 </script>
 ```
