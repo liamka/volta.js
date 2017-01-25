@@ -1,6 +1,6 @@
 ![Diet Logo](http://i.imgur.com/AJYLmkz.jpg)
 
-[![NPM](http://img.shields.io/npm/v/volta.js.svg?style=flat)](https://www.npmjs.org/package/volta.js)
+[![NPM](http://img.shields.io/npm/v/volta.js.svg?style=flat)](https://www.npmjs.org/package/volta.js) [![npm](https://img.shields.io/npm/dt/volta.js.svg)](https://www.npmjs.org/package/volta.js)
 
 
 [Volta.js](https://github.com/liamka/volta.js) is a tiny, fast library to increase speed of coding.
@@ -69,49 +69,7 @@ or see examples.
 
 ## Change log
 
-1.0.9
-
-Now you can write prefixes:
-
- * -webkit-
- * -moz-
- * -o-
- * -ms-
-
-Example:
-```html
-
-<div class="-webkit-border-radius-10 -moz-border-radius-10">
-    Example div block
-</div>
-
-```
-
-1.0.8
-
-Now you can select sizes:
-
- * px
- * pt
- * em
- * rem
- * vw
- * vh
- * vmin
- * vmax
-
-Example:
-```html
-
-<div class="margin-left-5-em width-1400-pt">
-    Example div block
-</div>
-
-```
-
-1.0.7
-*   Bugfixing
-
+[See github releases](https://github.com/liamka/volta.js/releases)
 
 ## Reference
 
