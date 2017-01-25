@@ -3,3 +3,4 @@
 .gitignore
 .TODO
 exec
+bower_components
