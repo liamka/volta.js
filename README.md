@@ -20,6 +20,10 @@ Bower
 ```
 bower install volta.js
 ```
+CDN
+```
+<script src="https://raw.githubusercontent.com/liamka/volta.js/master/volta.min.js"></script>
+```
 
 and initialize
 ```html
