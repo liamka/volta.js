@@ -1,6 +1,6 @@
 ![Diet Logo](http://i.imgur.com/AJYLmkz.jpg)
 
-[![NPM](http://img.shields.io/npm/v/volta.js.svg?style=flat)](https://www.npmjs.org/package/volta.js) [![npm](https://img.shields.io/npm/dt/volta.js.svg)](https://www.npmjs.org/package/volta.js) [MIT](https://img.shields.io/npm/l/volta.js.svg)
+[![NPM](http://img.shields.io/npm/v/volta.js.svg?style=flat)](https://www.npmjs.org/package/volta.js) [![npm](https://img.shields.io/npm/dt/volta.js.svg)](https://www.npmjs.org/package/volta.js) ![MIT](https://img.shields.io/npm/l/volta.js.svg)
 
 
 [Volta.js](https://github.com/liamka/volta.js) is a tiny, fast library to increase speed of coding.
