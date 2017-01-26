@@ -73,7 +73,7 @@ or see examples.
 
 ## Change log
 
-[See github releases](https://github.com/liamka/volta.js/releases)
+[See github releases here](https://github.com/liamka/volta.js/releases)
 
 ## Reference
 
