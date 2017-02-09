@@ -249,6 +249,7 @@ window.Conf = {
                         // if compute exists
                         if(ds[i].style.height) {
 
+                            //console.log("34343434")
                             //console.log(p[id])
                             //console.log(ds[i].style.height)
 
@@ -257,10 +258,28 @@ window.Conf = {
                         }
 
 
+                        if(h[1] != null) {
+                            var str = 'Глава 3.4.5.1 содержит дополнительную информацию';
+                            var re = /(surround-*)/i;
 
-                        var gg;
-                        if(h[1] != null) gg = (h[1].match(options.calculate) ? h[1] : h[1]);
-                        console.log(gg)
+                            // /^(-surround-(.*)|-mnemonic-(.*))$/
+
+                            console.log(h[1])
+
+                            var found = h[1].match(re);
+
+                            console.log(found);
+
+
+                        }
+
+
+
+                        //console.log(h[1].match(options.calculate));
+
+                        //var gg;
+                        //if(h[1] != null) gg = (h[1].match(options.calculate) ? h[1] : h[1]);
+                        //console.log(gg)
 
 
 
