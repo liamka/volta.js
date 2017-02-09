@@ -234,14 +234,34 @@ window.Conf = {
                                 options.size = m[m.length-1];
                                 m = m.splice(0,m.length-1);
                             }
+
+                            console.log(p[id])
+                            console.log(options.size)
+
+
                             m[0] = (m.length >= 3 ? m[0] + "-" + m[1] : m[0]);
                             for (var i_ = 0; i_ < m.length; i_++) {
                                 if((m.length - 1) == i_) {
                                     m[1] = m[i_];
                                 }
                             }
+
+
+                            if(m[1] % 1 === 0) {
+                                console.log(m)
+                            }
+
+
+
+
                             ds[i].style[(m[0] in options.replace) ? m[0] = options.replace[m[0]]:m[0]] = m[1] + (m[1] % 1 === 0 ? options.size :'');
+
+
+                            console.log("--------")
+                            m = null;
                         }
+
+                        console.log("========")
                     }
                 }
             }
