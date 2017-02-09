@@ -229,61 +229,6 @@ window.Conf = {
                     for (var id in p) {
                         var pref = false;
                         var h = p[id].split("-");
-
-
-
-                        //console.log(h[1])
-                        //console.log(options.ca)
-
-
-
-                        if(h[1] != null) {
-                            //console.log(h[1])
-                            //console.log(h[1].match(options.ca))
-                            //if(h[1].match(options.ca)) {
-                                //console.log(h[1])
-                            //}
-                        }
-
-
-                        // if compute exists
-                        if(ds[i].style.height) {
-
-                            //console.log("34343434")
-                            //console.log(p[id])
-                            //console.log(ds[i].style.height)
-
-
-                            //
-                        }
-
-
-                        if(h[1] != null) {
-                            var str = 'Глава 3.4.5.1 содержит дополнительную информацию';
-                            var re = /(surround-*)/i;
-
-                            // /^(-surround-(.*)|-mnemonic-(.*))$/
-
-                            console.log(h[1])
-
-                            var found = h[1].match(re);
-
-                            console.log(found);
-
-
-                        }
-
-
-
-                        //console.log(h[1].match(options.calculate));
-
-                        //var gg;
-                        //if(h[1] != null) gg = (h[1].match(options.calculate) ? h[1] : h[1]);
-                        //console.log(gg)
-
-
-
-
                         if(h[1] != null) p[id] = (h[1].match(options.prefix) ? (h.splice(2,h.length)).join('-') : p[id]);
                         if (p[id].toLowerCase().match(options.sub_strings) || pref) {
                             var m = p[id].toLowerCase().split('-');
