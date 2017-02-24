@@ -1,6 +1,6 @@
 {
   "name": "volta.js",
-  "version": "1.11.28",
+  "version": "1.11.29",
   "description": "Tiny, fast library to increase speed of coding",
   "main": "volta.js",
   "directories": {
