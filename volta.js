@@ -8,6 +8,7 @@ window.Conf = {
             calculate: /^(-surround-(.*)|-mnemonic-(.*))$/,
             selectors: "*",
             size: "px",
+            extra: false,
             replace:{
                 "align-content":"alignContent",
                 "align-items":"alignItems",
@@ -200,8 +201,7 @@ window.Conf = {
         },
         vlog: {
             mess: "",
-            background: "inherit",
-            color: "#C12127"
+            style: ""
         }
     }
 };
@@ -223,8 +223,10 @@ window.Conf = {
             var _options = options;
             this.options = copyObj(options,'render');
             function handler(options) {
-                var ds = document.querySelectorAll(options.selectors);
+                var ds = (_options.extra ? '1234' : document.querySelectorAll(options.selectors));
+                console.log(ds)
                 for (var i = 0; i < ds.length; i++) {
+                    console.log(ds[i])
                     var p = ds[i].className.split(' ');
                     if(typeof ds[i].attributes[options.attr] == "object") {
                         var va = ds[i].attributes[options.attr].value.replace('{', '').replace('}', '').replace('}', '').replace(/(?:\r\n|\r|\n)/g, ' ').split(' ');
@@ -282,10 +284,13 @@ window.Conf = {
         /**
          Console log
          */
-        Volta.vlog = function(mess, background, color) {
-            var options = {background: background,color: color};
+        Volta.vlog = function(mess, style) {
+            var options = {style: style};
             this.options = copyObj(options,'vlog');
             function handler(options) {
+                Volta.render({
+                    extra: style
+                });
                 console.log('%c'+mess, 'background: '+options.background+'; color: '+options.color+'');
             }
             handler(this.options);
@@ -308,5 +313,5 @@ window.Conf = {
 
 }).call();
 if(typeof vlog != 'function'){
-    window.vlog = function(mess, background, color){Volta.vlog(mess, background, color)};
+    window.vlog = function(mess, style){Volta.vlog(mess, style)};
 }
