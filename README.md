@@ -10,7 +10,8 @@
 </div>
 ```
 
-### Text resizer (like fittextjs)
+### Also includes
+#### Text resizer (like fittextjs)
 ```html
 <script>
     Volta.resize({
@@ -21,7 +22,7 @@
 </script>
 ```
 
-### Colorful text in console
+#### Colorful text in console
 ```html
 <script>
     Volta.vlog('Volta.JS Madness!', 'green', '#ffc107')
