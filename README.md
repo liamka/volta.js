@@ -10,6 +10,26 @@
 </div>
 ```
 
+### Text resizer (like fittextjs)
+```html
+<script>
+    Volta.resize({
+        elements: "p",
+        size: "px",
+        compressor: 2
+    });
+</script>
+```
+
+### Colorful text in console
+```html
+<script>
+    Volta.vlog('Volta.JS Madness!', 'green', '#ffc107')
+    // or
+    vlog('This is Volta.JS');
+</script>
+```
+
 ## Install
 
 NPM

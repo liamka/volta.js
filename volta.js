@@ -198,8 +198,8 @@ window.Conf = {
             size: "px",
             compressor: 1
         },
-        log: {
-            message: "",
+        vlog: {
+            mess: "",
             background: "inherit",
             color: "#C12127"
         }
@@ -282,9 +282,9 @@ window.Conf = {
         /**
          Console log
          */
-        Volta.log = function(mess, background, color) {
+        Volta.vlog = function(mess, background, color) {
             var options = {background: background,color: color};
-            this.options = copyObj(options,'log');
+            this.options = copyObj(options,'vlog');
             function handler(options) {
                 console.log('%c'+mess, 'background: '+options.background+'; color: '+options.color+'');
             }
@@ -307,7 +307,6 @@ window.Conf = {
     })();
 
 }).call();
-
-function LOGS(mess, background, color) {
-    Volta.log(mess, background, color)
+if(typeof vlog != 'function'){
+    window.vlog = function(mess, background, color){Volta.vlog(mess, background, color)};
 }
