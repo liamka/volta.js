@@ -197,6 +197,11 @@ window.Conf = {
             elements: "",
             size: "px",
             compressor: 1
+        },
+        log: {
+            message: "",
+            background: "inherit",
+            color: "#C12127"
         }
     }
 };
@@ -275,6 +280,18 @@ window.Conf = {
         }
 
         /**
+         Console log
+         */
+        Volta.log = function(mess, background, color) {
+            var options = {background: background,color: color};
+            this.options = copyObj(options,'log');
+            function handler(options) {
+                console.log('%c'+mess, 'background: '+options.background+'; color: '+options.color+'');
+            }
+            handler(this.options);
+        }
+
+        /**
          * Custom functions
          */
         function copyObj(obj,name) {
@@ -290,3 +307,7 @@ window.Conf = {
     })();
 
 }).call();
+
+function LOGS(mess, background, color) {
+    Volta.log(mess, background, color)
+}
