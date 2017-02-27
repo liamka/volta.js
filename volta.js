@@ -8,7 +8,7 @@ window.Conf = {
             calculate: /^(-surround-(.*)|-mnemonic-(.*))$/,
             selectors: "*",
             size: "px",
-            extra: false,
+            return: false,
             replace:{
                 "align-content":"alignContent",
                 "align-items":"alignItems",
@@ -223,16 +223,19 @@ window.Conf = {
             var _options = options;
             this.options = copyObj(options,'render');
             function handler(options) {
-                var ds = (_options.extra ? '1234' : document.querySelectorAll(options.selectors));
-                console.log(ds)
+                var ds = (_options.return ? '111111' : document.querySelectorAll(options.selectors));
                 for (var i = 0; i < ds.length; i++) {
-                    console.log(ds[i])
-                    var p = ds[i].className.split(' ');
-                    if(typeof ds[i].attributes[options.attr] == "object") {
-                        var va = ds[i].attributes[options.attr].value.replace('{', '').replace('}', '').replace('}', '').replace(/(?:\r\n|\r|\n)/g, ' ').split(' ');
-                        for (var ids in va)
-                            va[ids] != "" ? p.push(va[ids]) : "";
+                    var p = (!_options.return ? ds[i].className.split(' ') : ds[i].split(_options.return));
+                    //console.log(p)
+                    //https://learn.javascript.ru/prototype
+                    if(!_options.return) {
+                        if(typeof ds[i].attributes[options.attr] == "object") {
+                            var va = ds[i].attributes[options.attr].value.replace('{', '').replace('}', '').replace('}', '').replace(/(?:\r\n|\r|\n)/g, ' ').split(' ');
+                            for (var ids in va)
+                                va[ids] != "" ? p.push(va[ids]) : "";
+                        }
                     }
+                    //console.log("The Prodigy")
                     for (var id in p) {
                         var pref = false;
                         var h = p[id].split("-");
@@ -289,7 +292,7 @@ window.Conf = {
             this.options = copyObj(options,'vlog');
             function handler(options) {
                 Volta.render({
-                    extra: style
+                    return: style
                 });
                 console.log('%c'+mess, 'background: '+options.background+'; color: '+options.color+'');
             }
