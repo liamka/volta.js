@@ -200,7 +200,7 @@ window.Conf = {
             compressor: 1
         },
         vlog: {
-            style: 'background-inherit color-#C12127'
+            compressor: 'background-inherit color-#C12127'
         }
     }
 };
@@ -290,15 +290,17 @@ window.Conf = {
         /**
          Console log
          */
-        Volta.vlog = function(mess, style, options) {
-            this.options = copyObj(options,'vlog');
-
-            console.log(this.options)
-
-            function handler(options) {
-
+        Volta.vlog = function(mess,options) {
+            this.options = copyObj({
+                compressor: options
+            },'vlog');
+            function handler(mess,options) {
+                var styles = Volta.render({
+                    return: options
+                });
+                console.log('%c'+mess, styles.join(';'));
             }
-            handler(this.options);
+            handler(mess,this.options);
         }
 
         /**
@@ -318,5 +320,5 @@ window.Conf = {
 
 }).call();
 if(typeof vlog != 'function'){
-    window.vlog = function(mess, style){Volta.vlog(mess, style)};
+    window.vlog = function(mess,options){Volta.vlog(mess,options)};
 }
