@@ -1,5 +1,6 @@
 .git
 .npm-debug.log
+npm-debug.log
 .gitignore
 .TODO
 exec
