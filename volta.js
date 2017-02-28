@@ -223,11 +223,10 @@ window.Conf = {
             var _options = options;
             this.options = copyObj(options,'render');
             function handler(options) {
-                var ds = (_options.return ? '111111' : document.querySelectorAll(options.selectors));
+                var ds = (_options.return ? [0] : document.querySelectorAll(options.selectors));
                 for (var i = 0; i < ds.length; i++) {
-                    var p = (!_options.return ? ds[i].className.split(' ') : ds[i].split(_options.return));
-                    //console.log(p)
-                    //https://learn.javascript.ru/prototype
+                    var p = (!_options.return ? ds[i].className.split(' ') : (_options.return).split(' '));
+                    console.log(p)
                     if(!_options.return) {
                         if(typeof ds[i].attributes[options.attr] == "object") {
                             var va = ds[i].attributes[options.attr].value.replace('{', '').replace('}', '').replace('}', '').replace(/(?:\r\n|\r|\n)/g, ' ').split(' ');
@@ -235,7 +234,7 @@ window.Conf = {
                                 va[ids] != "" ? p.push(va[ids]) : "";
                         }
                     }
-                    //console.log("The Prodigy")
+
                     for (var id in p) {
                         var pref = false;
                         var h = p[id].split("-");
@@ -252,7 +251,14 @@ window.Conf = {
                                     m[1] = m[i_];
                                 }
                             }
-                            ds[i].style[(m[0] in options.replace) ? m[0] = options.replace[m[0]]:m[0]] = m[1] + (m[1] % 1 === 0 ? options.size :'');
+
+                            if(!_options.return) {
+                                ds[i].style[(m[0] in options.replace) ? m[0] = options.replace[m[0]]:m[0]] = m[1] + (m[1] % 1 === 0 ? options.size :'');
+                            } else {
+                                console.log('sdfasdfasd')
+                            }
+
+
                         }
                         options = copyObj(_options,'render');
                     }
