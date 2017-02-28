@@ -200,8 +200,7 @@ window.Conf = {
             compressor: 1
         },
         vlog: {
-            mess: "",
-            style: ""
+            style: 'background-inherit color-#C12127'
         }
     }
 };
@@ -220,13 +219,13 @@ window.Conf = {
          Render
          */
         Volta.render = function(options) {
+            var _returned = [];
             var _options = options;
             this.options = copyObj(options,'render');
             function handler(options) {
                 var ds = (_options.return ? [0] : document.querySelectorAll(options.selectors));
                 for (var i = 0; i < ds.length; i++) {
                     var p = (!_options.return ? ds[i].className.split(' ') : (_options.return).split(' '));
-                    console.log(p)
                     if(!_options.return) {
                         if(typeof ds[i].attributes[options.attr] == "object") {
                             var va = ds[i].attributes[options.attr].value.replace('{', '').replace('}', '').replace('}', '').replace(/(?:\r\n|\r|\n)/g, ' ').split(' ');
@@ -234,7 +233,6 @@ window.Conf = {
                                 va[ids] != "" ? p.push(va[ids]) : "";
                         }
                     }
-
                     for (var id in p) {
                         var pref = false;
                         var h = p[id].split("-");
@@ -251,20 +249,19 @@ window.Conf = {
                                     m[1] = m[i_];
                                 }
                             }
-
                             if(!_options.return) {
                                 ds[i].style[(m[0] in options.replace) ? m[0] = options.replace[m[0]]:m[0]] = m[1] + (m[1] % 1 === 0 ? options.size :'');
                             } else {
-                                console.log('sdfasdfasd')
+                                var key = Object.keys(options.replace).filter(function(key) {return options.replace[key] === options.replace[m[0]]})[0];
+                                _returned.push(key + ': ' + m[1] + (m[1] % 1 === 0 ? options.size :''));
                             }
-
-
                         }
                         options = copyObj(_options,'render');
                     }
                 }
+                return (_options.return ? _returned : '');
             }
-            handler(this.options);
+            return handler(this.options);
         };
 
         /**
@@ -293,14 +290,13 @@ window.Conf = {
         /**
          Console log
          */
-        Volta.vlog = function(mess, style) {
-            var options = {style: style};
+        Volta.vlog = function(mess, style, options) {
             this.options = copyObj(options,'vlog');
+
+            console.log(this.options)
+
             function handler(options) {
-                Volta.render({
-                    return: style
-                });
-                console.log('%c'+mess, 'background: '+options.background+'; color: '+options.color+'');
+
             }
             handler(this.options);
         }
