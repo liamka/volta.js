@@ -25,7 +25,7 @@
 #### Colorful text in console
 ```html
 <script>
-    Volta.vlog('Volta.JS Madness!', 'green', '#ffc107')
+    Volta.vlog('Volta.JS Madness!', 'background-green color-white')
     // or
     vlog('This is Volta.JS');
 </script>

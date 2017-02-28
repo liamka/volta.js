@@ -200,7 +200,7 @@ window.Conf = {
             compressor: 1
         },
         vlog: {
-            compressor: 'background-inherit color-#C12127'
+            return: 'background-inherit color-#C12127'
         }
     }
 };
@@ -291,14 +291,9 @@ window.Conf = {
          Console log
          */
         Volta.vlog = function(mess,options) {
-            this.options = copyObj({
-                compressor: options
-            },'vlog');
+            this.options = copyObj({return: options},'vlog');
             function handler(mess,options) {
-                var styles = Volta.render({
-                    return: options
-                });
-                console.log('%c'+mess, styles.join(';'));
+                console.log('%c'+mess, Volta.render(options).join(';'));
             }
             handler(mess,this.options);
         }
