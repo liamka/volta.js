@@ -51,6 +51,11 @@ and initialize
 </script>
 ```
 
+You can use this CDN
+```html
+<script src="//kkotikov.ru/lab/volta.js/volta-latest.min.js"></script>
+```
+
 ## More examples
 
 ```html
