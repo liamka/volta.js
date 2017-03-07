@@ -220,7 +220,6 @@ window.Conf = {
          Render
          */
         Volta.render = function(options) {
-            console.log(options)
             var _returned = [];
             var _options = options;
             this.options = copyObj(options,'render');
