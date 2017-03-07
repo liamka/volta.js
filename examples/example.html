@@ -1,11 +1,20 @@
 <script type="text/javascript" src="../volta.js"></script>
 
-<p class="border-radius-4-px font-size-20" volta="background-green color-white" style="height: 50px;">SCOOTER</p>
+<p class="border-radius-4-px" volta="background-green color-white" style="height: 50px;">SCOOTER</p>
 
 <p class="background-grey -webkit-border-radius-10-em -calc-height-550" style="height: 50px;">THE PRODIGY</p>
 
 <script>
     Volta.render({
-        size: "em"
+        size: "px"
     });
+
+    Volta.resize({
+        elements: "p",
+        size: "px",
+        compressor: 2
+    });
+
+    vlog('This is Volta.JS');
+    Volta.vlog(' Hello Volta ', 'background-green color-white');
 </script>
