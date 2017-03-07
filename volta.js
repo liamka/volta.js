@@ -219,6 +219,7 @@ window.Conf = {
          Render
          */
         Volta.render = function(options) {
+            console.log(options)
             var _returned = [];
             var _options = options;
             this.options = copyObj(options,'render');
@@ -319,4 +320,29 @@ window.Conf = {
 }).call();
 if(typeof vlog != 'function'){
     window.vlog = function(mess,options){Volta.vlog(mess,options)};
+}
+document.addEventListener('DOMContentLoaded', function() {
+
+}, false);
+
+var run = false;
+document.onreadystatechange = function(){
+
+
+
+    console.log(document.readyState)
+
+
+    
+
+    if(document.readyState == "interactive" && run === false) {
+
+
+
+        Volta.render({
+            size: "px"
+        });
+
+        run = true;
+    }
 }
