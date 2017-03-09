@@ -324,6 +324,6 @@ if(typeof vlog != 'function'){
 }
 document.onreadystatechange = function(){
     if(!window.Conf.options.run) {
-        Volta.render();
+        Volta.render({});
     }
 }
