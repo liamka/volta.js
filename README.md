@@ -10,7 +10,7 @@
 </div>
 ```
 
-### Also includes
+### Also includes:
 #### Text resizer (like fittextjs)
 ```html
 <script>
