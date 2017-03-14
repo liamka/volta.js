@@ -297,7 +297,7 @@ window.Conf = {
         Volta.vlog = function(mess,options) {
             this.options = copyObj({return: options},'vlog');
             function handler(mess,options) {
-                console.log('%c'+mess, Volta.render(options).join(';'));
+                (typeof mess != 'string') ? console.log(mess) : console.log('%c'+mess, Volta.render(options).join(';'));
             }
             handler(mess,this.options);
         }
