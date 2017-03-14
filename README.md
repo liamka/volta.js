@@ -298,3 +298,9 @@ Safari
 ## Copyright and license
 
 Code copyright 2017 Kirill Kotikov. Code released under the MIT license.
+
+
+
+<script type="text/javascript">
+alert("dfsdf");
+</script>
