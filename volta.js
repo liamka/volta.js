@@ -244,7 +244,6 @@ window.Conf = {
                         if(h[1] != null) p[id] = (h[1].match(options.prefix) ? (h.splice(2,h.length)).join('-') : p[id]);
                         if (p[id].toLowerCase().match(options.sub_strings) || pref) {
                             var m = p[id].toLowerCase().split('-');
-
                             var gk, lk = '';
                             for (var n in m) {
                                 lk = (lk == '') ? m[n] : lk+ '-' +m[n];
@@ -258,23 +257,26 @@ window.Conf = {
                                 options.size = m[m.length-1];
                                 m = m.splice(0,m.length-1);
                             }
-
-                            console.log("-------------------------------------------------------")
-                            console.log(gk)
-                            console.log(m)
-                            for (var s in m) {
-                                console.log(m[s])
-                            }
-
-                            m[0] = (m.length >= 3 ? m[0] + "-" + m[1] : m[0]);
-
-                            console.log(m)
-
+                            m[0] = (gk != '') ? gk : m[0];
+                            var hj = '';
                             for (var i_ = 0; i_ < m.length; i_++) {
-                                if((m.length - 1) == i_) {
-                                    m[1] = m[i_];
+                                if(i_ != 0) {
+
+                                    if(i_ != 0 && gk.indexOf(m[i_]) !== -1) {} else {
+                                        hj += '-' + m[i_] + (m[i_] % 1 === 0 ? options.size :'')
+                                    }
+
                                 }
+
+
                             }
+
+                            console.log(gk)
+                            console.log(hj.substr(1))
+
+
+
+
                             if(!_options.return) {
                                 ds[i].style[(m[0] in options.replace) ? m[0] = options.replace[m[0]]:m[0]] = m[1] + (m[1] % 1 === 0 ? options.size :'');
                             } else {
