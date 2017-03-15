@@ -244,16 +244,48 @@ window.Conf = {
                         if(h[1] != null) p[id] = (h[1].match(options.prefix) ? (h.splice(2,h.length)).join('-') : p[id]);
                         if (p[id].toLowerCase().match(options.sub_strings) || pref) {
                             var m = p[id].toLowerCase().split('-');
+
+
+                            console.log("--------------------------------------------------------------------------------")
+
+                            var lk = '';
+                            for (var n in m) {
+                                if(m[n].toLowerCase().match(options.sub_strings)) {
+                                    // Есть ли еще совпадения?
+                                    if(options.replace[m[n]]) {
+                                        lk = options.replace[m[n]];
+                                        console.log(options.replace[m[n]])
+                                    }
+                                }
+                            }
                             if (m[m.length-1].match(options.sizes)) {
                                 options.size = m[m.length-1];
                                 m = m.splice(0,m.length-1);
                             }
-                            m[0] = (m.length >= 3 ? m[0] + "-" + m[1] : m[0]);
+
+
+                            console.log(lk)
+
+
+
+
+                            if(m.length >= 3) {
+                                m[0] = m[0] + "-" + m[1];
+                            }
+
+
+                            console.log(m[0])
+
+
+
+
+
                             for (var i_ = 0; i_ < m.length; i_++) {
                                 if((m.length - 1) == i_) {
                                     m[1] = m[i_];
                                 }
                             }
+                            console.log(m)
                             if(!_options.return) {
                                 ds[i].style[(m[0] in options.replace) ? m[0] = options.replace[m[0]]:m[0]] = m[1] + (m[1] % 1 === 0 ? options.size :'');
                             } else {
