@@ -245,11 +245,13 @@ window.Conf = {
                         if (p[id].toLowerCase().match(options.sub_strings) || pref) {
                             var m = p[id].toLowerCase().split('-');
                             var gk, lk = '';
+                            var yu = '';
                             for (var n in m) {
                                 lk = (lk == '') ? m[n] : lk+ '-' +m[n];
                                 if(lk.toLowerCase().match(options.sub_strings)) {
                                     if(options.replace[lk]) {
                                         gk = lk;
+                                        yu = options.replace[lk];
                                     }
                                 }
                             }
@@ -261,24 +263,13 @@ window.Conf = {
                             var hj = '';
                             for (var i_ = 0; i_ < m.length; i_++) {
                                 if(i_ != 0) {
-
                                     if(i_ != 0 && gk.indexOf(m[i_]) !== -1) {} else {
                                         hj += '-' + m[i_] + (m[i_] % 1 === 0 ? options.size :'')
                                     }
-
                                 }
-
-
                             }
-
-                            console.log(gk)
-                            console.log(hj.substr(1))
-
-
-
-
                             if(!_options.return) {
-                                ds[i].style[(m[0] in options.replace) ? m[0] = options.replace[m[0]]:m[0]] = m[1] + (m[1] % 1 === 0 ? options.size :'');
+                                ds[i].style[yu] = hj.substr(1);
                             } else {
                                 _returned.push(Object.keys(options.replace).filter(function(key) {return options.replace[key] === options.replace[m[0]]})[0] + ': ' + m[1] + (m[1] % 1 === 0 ? options.size :''));
                             }
