@@ -245,16 +245,12 @@ window.Conf = {
                         if (p[id].toLowerCase().match(options.sub_strings) || pref) {
                             var m = p[id].toLowerCase().split('-');
 
-
-                            console.log("--------------------------------------------------------------------------------")
-
-                            var lk = '';
+                            var gk, lk = '';
                             for (var n in m) {
-                                if(m[n].toLowerCase().match(options.sub_strings)) {
-                                    // Есть ли еще совпадения?
-                                    if(options.replace[m[n]]) {
-                                        lk = options.replace[m[n]];
-                                        console.log(options.replace[m[n]])
+                                lk = (lk == '') ? m[n] : lk+ '-' +m[n];
+                                if(lk.toLowerCase().match(options.sub_strings)) {
+                                    if(options.replace[lk]) {
+                                        gk = lk;
                                     }
                                 }
                             }
@@ -263,29 +259,22 @@ window.Conf = {
                                 m = m.splice(0,m.length-1);
                             }
 
-
-                            console.log(lk)
-
-
-
-
-                            if(m.length >= 3) {
-                                m[0] = m[0] + "-" + m[1];
+                            console.log("-------------------------------------------------------")
+                            console.log(gk)
+                            console.log(m)
+                            for (var s in m) {
+                                console.log(m[s])
                             }
 
+                            m[0] = (m.length >= 3 ? m[0] + "-" + m[1] : m[0]);
 
-                            console.log(m[0])
-
-
-
-
+                            console.log(m)
 
                             for (var i_ = 0; i_ < m.length; i_++) {
                                 if((m.length - 1) == i_) {
                                     m[1] = m[i_];
                                 }
                             }
-                            console.log(m)
                             if(!_options.return) {
                                 ds[i].style[(m[0] in options.replace) ? m[0] = options.replace[m[0]]:m[0]] = m[1] + (m[1] % 1 === 0 ? options.size :'');
                             } else {
