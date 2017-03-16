@@ -262,7 +262,7 @@ window.Conf = {
                             m[0] = (gk != '') ? gk : m[0];
                             var hj = '';
                             for (var i_ = 0; i_ < m.length; i_++) {
-                                if(i_ != 0) {
+                                if(i_ != 0 && gk) {
                                     if(i_ != 0 && gk.indexOf(m[i_]) !== -1) {} else {
                                         hj += '-' + m[i_] + (m[i_] % 1 === 0 ? options.size :'')
                                     }
@@ -271,7 +271,7 @@ window.Conf = {
                             if(!_options.return) {
                                 ds[i].style[yu] = hj.substr(1);
                             } else {
-                                _returned.push(Object.keys(options.replace).filter(function(key) {return options.replace[key] === options.replace[m[0]]})[0] + ': ' + m[1] + (m[1] % 1 === 0 ? options.size :''));
+                                _returned.push(Object.keys(options.replace).filter(function(key) {return options.replace[key] === options.replace[m[0]]})[0] + ': ' + hj.substr(1));
                             }
                         }
                         options = copyObj(_options,'render');
