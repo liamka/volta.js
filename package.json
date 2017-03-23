@@ -1,6 +1,6 @@
 {
   "name": "volta.js",
-  "version": "3.6.46",
+  "version": "3.6.47",
   "description": "Tiny, fast library to increase speed of coding",
   "main": "volta.js",
   "directories": {
@@ -19,7 +19,11 @@
     "hints",
     "bootstrap",
     "framework",
-    "fast"
+    "fast",
+    "development",
+    "web",
+    "design",
+    "html5"
   ],
   "author": "Kirill Kotikov",
   "license": "MIT",
