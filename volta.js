@@ -202,6 +202,12 @@ window.Conf = {
         },
         vlog: {
             return: 'background-inherit color-#C12127'
+        },
+        is_mobile: {
+            devices: 'Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini'
+        },
+        hider: {
+            elements: {}
         }
     }
 };
@@ -315,6 +321,76 @@ window.Conf = {
             }
             handler(mess,this.options);
         }
+
+
+
+
+
+
+
+
+        /**
+         Detect mobile
+         */
+        Volta.is_mobile = function(options) {
+            this.options = copyObj(options,'is_mobile');
+            function handler(options) {
+                var is_mo = false;
+                if(new RegExp("/"+options.devices+"/i").test(navigator.userAgent))
+                    is_mo = true;
+                return is_mo;
+            }
+            return handler(this.options);
+        }
+
+        /**
+         Hide elements
+         */
+        Volta.hider = function(options) {
+            this.options = copyObj(options,'hider');
+            function handler(options) {
+
+
+
+
+
+                $fd = Volta.is_mobile();
+                //console.log($fd)
+
+
+
+
+                //console.log(options)
+                for(var option in options.elements) {
+
+
+                    if(document.getElementById("topbar")) {
+                        console.log('111')
+                    } else if(document.getElementsByClassName("topbar")) {
+                        console.log('222')
+                    }
+                    //console.log(option)
+                    //console.log(options.elements[option])
+                    //console.log('-------')
+
+
+                    //console.log(window['.topbar'])
+
+
+                }
+
+
+
+
+            }
+            handler(this.options);
+        }
+
+
+
+
+
+
 
         /**
          * Custom functions
