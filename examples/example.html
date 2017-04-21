@@ -4,14 +4,12 @@
 
 <p class="background-grey -webkit-border-radius-10-em -calc-height-550" style="height: 50px;">THE PRODIGY</p>
 
-
-
-<div class="topbar">
-    TOP BAR CLASS
+<div class="browser">
+    SHOWS ONLY IN BROWSER
 </div>
 
-<div class="slider">
-    SLIDER CLASS
+<div class="mobile">
+    SHOWS ONLY ON MOBILE DEVICES
 </div>
 
 <script>
@@ -28,11 +26,23 @@
     vlog('This is Volta.JS 😃');
     Volta.vlog(' Hello Volta ', 'background-green color-white display-inline-block');
 
+    if(Volta.is_device({
+        devices: 'Android'
+    })) {
+        // This text show only on Android devices
+    }
+
+    Volta.hider({
+        mobile: false,
+        elements: [
+            '.browser'
+        ]
+    });
+
     Volta.hider({
         mobile: true,
         elements: [
-            '.topbar',
-            '.slider'
+            '.mobile'
         ]
     });
 </script>

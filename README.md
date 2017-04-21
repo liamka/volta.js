@@ -31,6 +31,31 @@
 </script>
 ```
 
+#### Show elements (messages, blocks etc.) only special devices
+Can be multiple caller
+```html
+<script>
+    if(Volta.is_device({
+        devices: 'Android'
+    })) {
+        // This text show only on Android devices
+    }
+</script>
+```
+
+#### Automatically mobile hider
+Can be multiple caller
+```html
+<script>
+    Volta.hider({
+        mobile: true,   // true - only mobile | false (by default) - all
+        elements: [
+            '.mobile'
+        ]
+    });
+</script>
+```
+
 ## Install
 
 NPM

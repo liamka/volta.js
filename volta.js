@@ -203,7 +203,7 @@ window.Conf = {
         vlog: {
             return: 'background-inherit color-#C12127'
         },
-        is_mobile: {
+        is_device: {
             devices: 'Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini'
         },
         hider: {
@@ -323,23 +323,16 @@ window.Conf = {
             handler(mess,this.options);
         }
 
-
-
-
-
-
-
-
         /**
-         Detect mobile
+         Detect device
          */
-        Volta.is_mobile = function(options) {
-            this.options = copyObj(options,'is_mobile');
+        Volta.is_device = function(options) {
+            this.options = copyObj(options,'is_device');
             function handler(options) {
-                var is_mo = false;
+                var is_m = false;
                 if(new RegExp("/"+options.devices+"/i").test(navigator.userAgent))
-                    is_mo = true;
-                return is_mo;
+                    is_m = true;
+                return is_m;
             }
             return handler(this.options);
         }
@@ -350,107 +343,41 @@ window.Conf = {
         Volta.hider = function(options) {
             this.options = copyObj(options,'hider');
             function handler(options) {
-                var is_mo = Volta.is_mobile();
-                for(var option in options.elements) {
-
-                    //console.log(is_mo);
-
-                    if(options.mobile && is_mo) {
-                        console.log(options.mobile);
-                    }
+                var is_m = Volta.is_device();
 
 
-
-
-
-/*
-
-                    if(options.elements[option] === true && is_mo === true) {
-                        console.log(option)
-                    }
-
-                    if(option.charAt(0) == '.') {
-                        if(document.getElementsByClassName(option.substr(1))[0] != null) {
-                            for (d = 0; d < document.getElementsByClassName(option.substr(1)).length; d++) {
-                                document.getElementsByClassName(option.substr(1))[d].style.display = 'none';
-                            }
-                        }
-                    }
-
-                    if(option.charAt(0) == '#') {
-                        if(document.getElementById(option.substr(1)) != null)
-                            document.getElementById(option.substr(1)).style.display = 'none';
-                    }
-
-*/
-
-                    //x.charAt(0)
-
-
-
-
-
-                    //var bool = (document.getElementById(option) === null) ? true : false;
-
-                    //console.log(option)
-                    //console.log(bool)
-
-                    /*if(bool === true) {
-                        //console.log(document.getElementsByClassName(option))
-                        console.log(option)
-                        for (d = 0; d < document.getElementsByClassName(option).length; d++) {
-                            document.getElementsByClassName(option)[d].style.display = 'none';
-                        }
-                    }*/
-
-                    //console.log(bool)
-                    //el[l].style.display = 'none';
-
-                    //console.log(option)
-                    //console.log(el)
-
-
-                    /*for (l = 0; l < el.length; l++) {
-
-                        //console.log(el[l])
-
-
-                        //el[l].style.display = 'none';
-                    }*/
-
-
-
-
-
-                    /*
-
-
-
-
-                    if(options.elements[option] && is_mo) {
-                        console.log(option)
-                        console.log(options.elements[option])
-                        el.style.display = "none";
-                    }
-
-*/
-
-
-
-
-
-
+                if(!is_m && !options.mobile) {
+                    return true;
                 }
+
+                //
+
+
+
+
+                //if(!options.mobile && is_m) {
+                //    return false;
+                //}
+                /*if(!is_m && options.mobile) {
+                    return false;
+                }*/
+
+
+
+                options.elements.forEach(function(opt) {
+                    if(opt.charAt(0) == '.' && document.getElementsByClassName(opt.substr(1))[0] != null) {
+                        for (d = 0; d < document.getElementsByClassName(opt.substr(1)).length; d++) {
+                            document.getElementsByClassName(opt.substr(1))[d].style.display = 'none';
+                        }
+                    }
+                    if(opt.charAt(0) == '#' && document.getElementById(opt.substr(1)) != null) {
+                        document.getElementById(opt.substr(1)).style.display = 'none';
+                    }
+                });
 
             }
             handler(this.options);
         }
-
-
-
-
-
-
 
         /**
          * Custom functions
