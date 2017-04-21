@@ -351,48 +351,47 @@ window.Conf = {
             function handler(options) {
                 var is_mo = Volta.is_mobile();
                 //console.log(is_mo)
-
-
-
-
-                //console.log(options)
                 for(var option in options.elements) {
-
-
-
-                    //var el;
-
-
-
-                    //
-
-                    console.log(document.getElementById('myElementId'))
-
-
-
-                    //var el = (document.getElementById("topbar")) ? document.getElementById("topbar") : document.getElementsByClassName("topbar");
-
-
-                    //document.getElementsByClassName("topbar").style.display = "none";
-                    // if option is true
+                    var el = (document.getElementById(option) === null) ? document.getElementsByClassName(option) : document.getElementById(option);
 
 
 
 
-
-                    //console.log(el)
-                    //console.log(option)
-                    //console.log(options.elements[option])
-                    //console.log('-------')
+                    console.log(option)
+                    console.log(el)
 
 
-                    //console.log(window['.topbar'])
+                    for (it = 0; it < el.length; it++) {
+
+                        console.log(el[it])
+
+
+                        el[it].style.display = 'none';
+                    }
+
+
+
+
+
+                    /*
+
+
+
+
+                    if(options.elements[option] && is_mo) {
+                        console.log(option)
+                        console.log(options.elements[option])
+                        el.style.display = "none";
+                    }
+
+*/
+
+
+
+
 
 
                 }
-
-
-
 
             }
             handler(this.options);
