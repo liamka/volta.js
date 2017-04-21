@@ -6,10 +6,6 @@
 
 
 
-<div id="topbar">
-    TOP BAR ID
-</div>
-
 <div class="topbar">
     TOP BAR CLASS
 </div>
@@ -33,9 +29,10 @@
     Volta.vlog(' Hello Volta ', 'background-green color-white display-inline-block');
 
     Volta.hider({
-        elements: {
-            'topbar': true,
-            'slider': true
-        }
+        mobile: true,
+        elements: [
+            '.topbar',
+            '.slider'
+        ]
     });
 </script>

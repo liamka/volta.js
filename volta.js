@@ -207,6 +207,7 @@ window.Conf = {
             devices: 'Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini'
         },
         hider: {
+            mobile: false,
             elements: {}
         }
     }
@@ -350,24 +351,72 @@ window.Conf = {
             this.options = copyObj(options,'hider');
             function handler(options) {
                 var is_mo = Volta.is_mobile();
-                //console.log(is_mo)
                 for(var option in options.elements) {
-                    var el = (document.getElementById(option) === null) ? document.getElementsByClassName(option) : document.getElementById(option);
 
+                    //console.log(is_mo);
 
-
-
-                    console.log(option)
-                    console.log(el)
-
-
-                    for (it = 0; it < el.length; it++) {
-
-                        console.log(el[it])
-
-
-                        el[it].style.display = 'none';
+                    if(options.mobile && is_mo) {
+                        console.log(options.mobile);
                     }
+
+
+
+
+
+/*
+
+                    if(options.elements[option] === true && is_mo === true) {
+                        console.log(option)
+                    }
+
+                    if(option.charAt(0) == '.') {
+                        if(document.getElementsByClassName(option.substr(1))[0] != null) {
+                            for (d = 0; d < document.getElementsByClassName(option.substr(1)).length; d++) {
+                                document.getElementsByClassName(option.substr(1))[d].style.display = 'none';
+                            }
+                        }
+                    }
+
+                    if(option.charAt(0) == '#') {
+                        if(document.getElementById(option.substr(1)) != null)
+                            document.getElementById(option.substr(1)).style.display = 'none';
+                    }
+
+*/
+
+                    //x.charAt(0)
+
+
+
+
+
+                    //var bool = (document.getElementById(option) === null) ? true : false;
+
+                    //console.log(option)
+                    //console.log(bool)
+
+                    /*if(bool === true) {
+                        //console.log(document.getElementsByClassName(option))
+                        console.log(option)
+                        for (d = 0; d < document.getElementsByClassName(option).length; d++) {
+                            document.getElementsByClassName(option)[d].style.display = 'none';
+                        }
+                    }*/
+
+                    //console.log(bool)
+                    //el[l].style.display = 'none';
+
+                    //console.log(option)
+                    //console.log(el)
+
+
+                    /*for (l = 0; l < el.length; l++) {
+
+                        //console.log(el[l])
+
+
+                        //el[l].style.display = 'none';
+                    }*/
 
 
 
