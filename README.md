@@ -55,7 +55,19 @@ Can be multiple caller
     });
 </script>
 ```
-
+or show or hide block on specify devices
+Devices list must be separated by horizontal slash |
+```html
+<script>
+    Volta.hider({
+        devices: 'iPad|iPod',
+        mobile: true,
+        elements: [
+            '.ipod-ipad'
+        ]
+    });
+</script>
+```
 ## Install
 
 NPM

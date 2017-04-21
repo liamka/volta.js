@@ -12,6 +12,10 @@
     SHOWS ONLY ON MOBILE DEVICES
 </div>
 
+<div class="ipod-ipad">
+    SHOW ONLY ON IPOD AND IPAD
+</div>
+
 <script>
     Volta.render({
         size: "px"
@@ -35,14 +39,23 @@
     Volta.hider({
         mobile: false,
         elements: [
-            '.browser'
+            '.mobile'
         ]
     });
 
     Volta.hider({
         mobile: true,
         elements: [
-            '.mobile'
+            '.browser'
+        ]
+    });
+
+    // Show element only on specify device
+    Volta.hider({
+        devices: 'iPad|iPod',
+        mobile: false,
+        elements: [
+            '.ipod-ipad'
         ]
     });
 </script>

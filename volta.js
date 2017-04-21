@@ -207,6 +207,7 @@ window.Conf = {
             devices: 'Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini'
         },
         hider: {
+            device: '',
             mobile: false,
             elements: {}
         }
@@ -344,26 +345,11 @@ window.Conf = {
             this.options = copyObj(options,'hider');
             function handler(options) {
                 var is_m = Volta.is_device();
-
-
-                if(!is_m && !options.mobile) {
+                if(options.mobile && !is_m) {
                     return true;
-                }
-
-                //
-
-
-
-
-                //if(!options.mobile && is_m) {
-                //    return false;
-                //}
-                /*if(!is_m && options.mobile) {
+                } else if(!options.mobile && is_m) {
                     return false;
-                }*/
-
-
-
+                }
                 options.elements.forEach(function(opt) {
                     if(opt.charAt(0) == '.' && document.getElementsByClassName(opt.substr(1))[0] != null) {
                         for (d = 0; d < document.getElementsByClassName(opt.substr(1)).length; d++) {
@@ -374,7 +360,6 @@ window.Conf = {
                         document.getElementById(opt.substr(1)).style.display = 'none';
                     }
                 });
-
             }
             handler(this.options);
         }
