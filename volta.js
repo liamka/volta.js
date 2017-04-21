@@ -349,13 +349,8 @@ window.Conf = {
         Volta.hider = function(options) {
             this.options = copyObj(options,'hider');
             function handler(options) {
-
-
-
-
-
-                $fd = Volta.is_mobile();
-                //console.log($fd)
+                var is_mo = Volta.is_mobile();
+                //console.log(is_mo)
 
 
 
@@ -364,11 +359,28 @@ window.Conf = {
                 for(var option in options.elements) {
 
 
-                    if(document.getElementById("topbar")) {
-                        console.log('111')
-                    } else if(document.getElementsByClassName("topbar")) {
-                        console.log('222')
-                    }
+
+                    //var el;
+
+
+
+                    //
+
+                    console.log(document.getElementById('myElementId'))
+
+
+
+                    //var el = (document.getElementById("topbar")) ? document.getElementById("topbar") : document.getElementsByClassName("topbar");
+
+
+                    //document.getElementsByClassName("topbar").style.display = "none";
+                    // if option is true
+
+
+
+
+
+                    //console.log(el)
                     //console.log(option)
                     //console.log(options.elements[option])
                     //console.log('-------')
