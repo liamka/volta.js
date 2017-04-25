@@ -303,8 +303,37 @@ window.Conf = {
             function handler(options) {
                 var Obj = new Volta();
                 var ds = document.querySelectorAll(options.elements);
-                for (var i = 0; i < ds.length; i++)
-                    Obj.props.sizeDivs[i] = {ds:ds[i],sz:parseFloat(document.defaultView.getComputedStyle(ds[i],null).getPropertyValue('font-size'))};
+                for (var i = 0; i < ds.length; i++) {
+
+
+
+                    console.log(ds[i])
+
+
+
+
+
+                    //el.style.fontSize = (fontSize + 1) + 'px';
+
+
+
+
+
+                    var fs = parseFloat(document.defaultView.getComputedStyle(ds[i],null).getPropertyValue('font-size'));
+
+                    console.log(fs);
+
+
+
+                    //console.log(parseFloat(document.defaultView.getComputedStyle(ds[i],null).getPropertyValue('font-size')))
+
+
+
+
+
+                    //Obj.props.sizeDivs[i] = {ds:ds[i],sz:parseFloat(document.defaultView.getComputedStyle(ds[i],null).getPropertyValue('font-size'))};
+                }
+
                 render(Obj,options);
                 window.addEventListener('resize', function(){
                     render(Obj,options);
@@ -368,7 +397,6 @@ window.Conf = {
          * Custom functions
          */
         function copyObj(obj,name) {
-            window.Conf.options.run = true; // state
             if (!obj) obj = {};
             var obj2 = {};
             for (var opt in Conf.options[name]) {
@@ -385,7 +413,5 @@ if(typeof vlog != 'function'){
     window.vlog = function(mess,options){Volta.vlog(mess,options)};
 }
 document.onreadystatechange = function(){
-    if(!window.Conf.options.run) {
-        Volta.render({});
-    }
+    Volta.render({});
 }
