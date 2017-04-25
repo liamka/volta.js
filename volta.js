@@ -294,9 +294,7 @@ window.Conf = {
          Resize
          */
         Volta.resize = function(options) {
-            this.options = copyObj(options,'resize');
-
-
+            var options = copyObj(options,'resize');
             function render(obj,options) {
                 for(var index in obj.props.sizeDivs) {
                     obj.props.sizeDivs[index].ds.style.fontSize = obj.props.sizeDivs[index].sz * (window.innerWidth/(window.screen.availWidth - (window.outerWidth - window.innerWidth)))*options.compressor+options.size;
@@ -304,19 +302,6 @@ window.Conf = {
             }
             function handler(options) {
                 var Obj = new Volta();
-
-
-
-
-
-                if(!window.Conf.options.ready) {
-                    console.log('55454545')
-                }
-
-
-
-
-
                 var ds = document.querySelectorAll(options.elements);
                 for (var i = 0; i < ds.length; i++)
                     Obj.props.sizeDivs[i] = {ds:ds[i],sz:parseFloat(document.defaultView.getComputedStyle(ds[i],null).getPropertyValue('font-size'))};
@@ -325,7 +310,9 @@ window.Conf = {
                     render(Obj,options);
                 }, true);
             }
-            handler(this.options);
+            document.onreadystatechange = function(){
+                handler(options);
+            }
         }
 
         /**
